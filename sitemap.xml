@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://randallblack.com/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+<loc>https://randallblack.com/</loc>
+</url>
+<url>
+<loc>https://randallblack.com/about-randy/</loc>
+<lastmod>2025-01-15T13:07:14-05:00</lastmod>
+</url>
+<url>
+<loc>https://randallblack.com/booting-windows-in-audit-mode-to-install-software-before-providing-the-device-to-the-end-user/</loc>
+<lastmod>2025-01-15T13:14:09-05:00</lastmod>
+</url>
+<url>
+<loc>https://randallblack.com/curriculum-vitae/</loc>
+<lastmod>2025-01-15T13:08:19-05:00</lastmod>
+</url>
+<url>
+<loc>https://randallblack.com/podcasts/</loc>
+<lastmod>2025-01-15T13:08:52-05:00</lastmod>
+</url>
+<url>
+<loc>https://randallblack.com/setting-up-ubuntu-server-and-crafty-controller-for-minecraft-server-management-a-comprehensive-guide/</loc>
+<lastmod>2025-01-15T13:12:54-05:00</lastmod>
+</url>
+<url>
+<loc>https://randallblack.com/understanding-deployment-image-servicing-and-management-dism-and-windows-assessment-and-deployment-kit-adkto-install-drivers-to-an-installation-iso/</loc>
+<lastmod>2025-01-15T13:13:27-05:00</lastmod>
+</url>
+</urlset>

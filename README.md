@@ -1,2 +1,0 @@
-# randallblack
-Personal website
