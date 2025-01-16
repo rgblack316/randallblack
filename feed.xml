@@ -3,7 +3,7 @@
     <title>Randall &quot;Randy&quot; Black</title>
     <link href="https://randallblack.com/feed.xml" rel="self" />
     <link href="https://randallblack.com" />
-    <updated>2025-01-16T09:51:06-05:00</updated>
+    <updated>2025-01-16T09:57:22-05:00</updated>
     <author>
         <name>Randall G. Black</name>
     </author>
@@ -34,48 +34,6 @@
 <p>Once Sysprep completes its task, the system will shut down. Now, when you boot the machine again, Windows will enter Audit Mode. This time, however, it will be a generalized system ready for deployment.</p><p>Here’s where the process transforms from the mundane to the marvelous. It’s like orchestrating a symphony of technology, ensuring every note (or line of code) plays harmoniously in your customized Windows ensemble. Think of it as a backstage pass to the inner workings of your operating system – a privilege bestowed upon tech virtuosos.</p><h3 id="step-5-completing-oobe-and-user-account-creation">Step 5: Completing OOBE and User Account Creation:</h3>
 <p>Upon reboot, Windows will resume the out-of-box experience, but fear not – your customizations remain intact. Complete the OOBE process by creating your user account and finishing the setup. Your system is now a finely tuned masterpiece, tailored precisely to your specifications.</p><h3 id="conclusion">Conclusion:</h3>
 <p>In the ever-evolving landscape of technology, mastering tools like Audit Mode empowers educators, technology specialists, and anyone seeking a personalized computing experience. The ability to install software and drivers with precision before finalizing a Windows installation is a game-changer.</p><p>So, fellow tech maestros, embrace the symphony of customization, let the keys of Ctrl, Shift, and F3 guide you, and may your Windows installations be harmonious and tailored to perfection!</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Understanding Deployment Image Servicing and Management (DISM) and Windows Assessment and Deployment Kit (ADK)to Install Drivers to an Installation ISO</title>
-        <author>
-            <name>Randall G. Black</name>
-        </author>
-        <link href="https://randallblack.com/understanding-deployment-image-servicing-and-management-dism-and-windows-assessment-and-deployment-kit-adkto-install-drivers-to-an-installation-iso/"/>
-        <id>https://randallblack.com/understanding-deployment-image-servicing-and-management-dism-and-windows-assessment-and-deployment-kit-adkto-install-drivers-to-an-installation-iso/</id>
-
-        <updated>2025-01-15T13:13:27-05:00</updated>
-            <summary>
-                <![CDATA[
-                    Rebuilding a Windows ISO with updates committed from DISM using the Windows Assessment and Deployment Kit (ADK) is a meticulous process but incredibly rewarding for IT professionals seeking a streamlined deployment solution. Let’s break down the steps to accomplish this task effectively. Ensure that you&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>Rebuilding a Windows ISO with updates committed from DISM using the Windows Assessment and Deployment Kit (ADK) is a meticulous process but incredibly rewarding for IT professionals seeking a streamlined deployment solution. Let’s break down the steps to accomplish this task effectively.</p><h3 id="step-1-initial-setup">Step 1: Initial Setup</h3>
-<p>Ensure that you have the Windows Assessment and Deployment Kit (ADK) installed on your system. You can download the latest version from the official Microsoft website.</p><h3 id="step-2-mounting-the-original-iso">Step 2: Mounting the Original ISO</h3>
-<p>Open a command prompt with administrator privileges and use the DISM command to mount the original Windows ISO. Replace the paths accordingly.</p><pre><code class="language-bash">Dism /Mount-Image /ImageFile:C:\Path\To\Original\Windows.iso /Index:1 /MountDir:C:\Mount\Point
-</code></pre>
-<h3 id="step-3-committing-updates-with-dism">Step 3: Committing Updates with DISM</h3>
-<p>Inject the desired updates into the mounted image using DISM. Make sure you have the update files (.cab or .msu) available.</p><pre><code class="language-bash">Dism /Image:C:\Mount\Point /Add-Package /PackagePath:C:\Path\To\Updates
-</code></pre>
-<h3 id="step-4-committing-changes-and-dismounting">Step 4: Committing Changes and Dismounting</h3>
-<p>Commit the changes made with DISM and dismount the image.</p><pre><code class="language-bash">Dism /Unmount-Image /MountDir:C:\Mount\Point /Commit
-</code></pre>
-<h3 id="step-5-creating-a-new-iso">Step 5: Creating a New ISO</h3>
-<p>Now, you will use the Windows ADK to create a new Windows ISO incorporating the updates.</p><ol>
-<li><p>Open the Deployment and Imaging Tools Environment with administrator privileges.</p></li>
-<li><p>Navigate to the directory where the ADK is installed. By default, it’s located at <code>C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\</code>.</p></li>
-<li><p>Use the <code>oscdimg</code> tool to create the new ISO. Replace the paths accordingly.</p></li>
-</ol>
-<pre><code class="language-bash">oscdimg -m -o -u2 -udfver102 -bootdata:2#p0,e,bC:\Path\To\Boot\etfsboot.com#pEF,e,bC:\Path\To\Boot\efisys.bin C:\Mount\Point C:\Path\To\New\WindowsUpdated.iso
-</code></pre>
-<h3 id="additional-considerations">Additional Considerations:</h3>
-<h4 id="handling-language-packs">Handling Language Packs:</h4>
-<p>If you are dealing with language packs, you can integrate them similarly using the <code>/Add-Package</code> command in DISM. This ensures that your customized ISO supports multiple languages.</p><h4 id="testing-the-custom-iso">Testing the Custom ISO:</h4>
-<p>Before deploying your newly crafted ISO in a production environment, it’s wise to test it in a virtual machine or a controlled setting to ensure that all updates and customizations work as intended.</p><h3 id="conclusion">Conclusion:</h3>
-<p>Rebuilding a Windows ISO with updates committed from DISM through the Windows Assessment and Deployment Kit is a powerful skill for IT professionals. This process allows you to create a customized, up-to-date installation medium tailored to your specific needs. Embrace the control, flexibility, and efficiency that this approach offers, and let your deployments be a testament to your mastery of Windows customization. Cheers to building Windows your way!</p>
             ]]>
         </content>
     </entry>
@@ -118,6 +76,58 @@ sudo apt install -y curl wget unzip
 <li><strong>Network:</strong> A stable internet connection with sufficient bandwidth to accommodate player traffic.</li>
 </ul>
 <p>By following these steps and considering the system requirements, you can set up Ubuntu Server and Crafty Controller to manage Minecraft servers effectively. Whether you’re hosting a small private server or a large multiplayer world, this setup provides the tools you need for seamless server management. Happy crafting!</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Understanding Deployment Image Servicing and Management (DISM) and Windows Assessment and Deployment Kit (ADK)to Install Drivers to an Installation ISO</title>
+        <author>
+            <name>Randall G. Black</name>
+        </author>
+        <link href="https://randallblack.com/understanding-deployment-image-servicing-and-management-dism-and-windows-assessment-and-deployment-kit-adkto-install-drivers-to-an-installation-iso/"/>
+        <id>https://randallblack.com/understanding-deployment-image-servicing-and-management-dism-and-windows-assessment-and-deployment-kit-adkto-install-drivers-to-an-installation-iso/</id>
+        <media:content url="https://randallblack.com/media/posts/5/dism.info.png" medium="image" />
+            <category term="windows adk"/>
+            <category term="windows"/>
+            <category term="microsoft"/>
+            <category term="driver injection"/>
+            <category term="dism"/>
+            <category term="deployment image servicing and managment"/>
+            <category term="assessment and deployment kit"/>
+
+        <updated>2023-08-16T12:00:00-04:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://randallblack.com/media/posts/5/dism.info.png" alt="" />
+                    Rebuilding a Windows ISO with updates committed from DISM using the Windows Assessment and Deployment Kit (ADK) is a meticulous process but incredibly rewarding for IT professionals seeking a streamlined deployment solution. Let’s break down the steps to accomplish this task effectively. Ensure that you&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://randallblack.com/media/posts/5/dism.info.png" class="type:primaryImage" alt="" /></p>
+                <p>Rebuilding a Windows ISO with updates committed from DISM using the Windows Assessment and Deployment Kit (ADK) is a meticulous process but incredibly rewarding for IT professionals seeking a streamlined deployment solution. Let’s break down the steps to accomplish this task effectively.</p><h3 id="step-1-initial-setup">Step 1: Initial Setup</h3>
+<p>Ensure that you have the Windows Assessment and Deployment Kit (ADK) installed on your system. You can download the latest version from the official Microsoft website.</p><h3 id="step-2-mounting-the-original-iso">Step 2: Mounting the Original ISO</h3>
+<p>Open a command prompt with administrator privileges and use the DISM command to mount the original Windows ISO. Replace the paths accordingly.</p><pre><code class="language-bash">Dism /Mount-Image /ImageFile:C:\Path\To\Original\Windows.iso /Index:1 /MountDir:C:\Mount\Point
+</code></pre>
+<h3 id="step-3-committing-updates-with-dism">Step 3: Committing Updates with DISM</h3>
+<p>Inject the desired updates into the mounted image using DISM. Make sure you have the update files (.cab or .msu) available.</p><pre><code class="language-bash">Dism /Image:C:\Mount\Point /Add-Package /PackagePath:C:\Path\To\Updates
+</code></pre>
+<h3 id="step-4-committing-changes-and-dismounting">Step 4: Committing Changes and Dismounting</h3>
+<p>Commit the changes made with DISM and dismount the image.</p><pre><code class="language-bash">Dism /Unmount-Image /MountDir:C:\Mount\Point /Commit
+</code></pre>
+<h3 id="step-5-creating-a-new-iso">Step 5: Creating a New ISO</h3>
+<p>Now, you will use the Windows ADK to create a new Windows ISO incorporating the updates.</p><ol>
+<li><p>Open the Deployment and Imaging Tools Environment with administrator privileges.</p></li>
+<li><p>Navigate to the directory where the ADK is installed. By default, it’s located at <code>C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\</code>.</p></li>
+<li><p>Use the <code>oscdimg</code> tool to create the new ISO. Replace the paths accordingly.</p></li>
+</ol>
+<pre><code class="language-bash">oscdimg -m -o -u2 -udfver102 -bootdata:2#p0,e,bC:\Path\To\Boot\etfsboot.com#pEF,e,bC:\Path\To\Boot\efisys.bin C:\Mount\Point C:\Path\To\New\WindowsUpdated.iso
+</code></pre>
+<h3 id="additional-considerations">Additional Considerations:</h3>
+<h4 id="handling-language-packs">Handling Language Packs:</h4>
+<p>If you are dealing with language packs, you can integrate them similarly using the <code>/Add-Package</code> command in DISM. This ensures that your customized ISO supports multiple languages.</p><h4 id="testing-the-custom-iso">Testing the Custom ISO:</h4>
+<p>Before deploying your newly crafted ISO in a production environment, it’s wise to test it in a virtual machine or a controlled setting to ensure that all updates and customizations work as intended.</p><h3 id="conclusion">Conclusion:</h3>
+<p>Rebuilding a Windows ISO with updates committed from DISM through the Windows Assessment and Deployment Kit is a powerful skill for IT professionals. This process allows you to create a customized, up-to-date installation medium tailored to your specific needs. Embrace the control, flexibility, and efficiency that this approach offers, and let your deployments be a testament to your mastery of Windows customization. Cheers to building Windows your way!</p>
             ]]>
         </content>
     </entry>
