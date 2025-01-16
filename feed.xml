@@ -3,40 +3,12 @@
     <title>Randall &quot;Randy&quot; Black</title>
     <link href="https://randallblack.com/feed.xml" rel="self" />
     <link href="https://randallblack.com" />
-    <updated>2025-01-16T09:57:22-05:00</updated>
+    <updated>2025-01-16T09:59:03-05:00</updated>
     <author>
         <name>Randall G. Black</name>
     </author>
     <id>https://randallblack.com</id>
 
-    <entry>
-        <title>Booting Windows in Audit Mode to Install Software Before Providing the Device to the End User</title>
-        <author>
-            <name>Randall G. Black</name>
-        </author>
-        <link href="https://randallblack.com/booting-windows-in-audit-mode-to-install-software-before-providing-the-device-to-the-end-user/"/>
-        <id>https://randallblack.com/booting-windows-in-audit-mode-to-install-software-before-providing-the-device-to-the-end-user/</id>
-
-        <updated>2025-01-15T13:14:09-05:00</updated>
-            <summary>
-                <![CDATA[
-                    Introduction: In the vast realm of managing technology resources, there comes a time when one needs to install software and drivers on a Windows system seamlessly. One invaluable tool in this process is Audit Mode, a hidden gem that allows for customization before the system&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <h2 id="introduction">Introduction:</h2>
-<p>In the vast realm of managing technology resources, there comes a time when one needs to install software and drivers on a Windows system seamlessly. One invaluable tool in this process is Audit Mode, a hidden gem that allows for customization before the system is finalized. In this guide, we’ll walk through the steps to boot Windows into Audit Mode and efficiently install the necessary components for a smooth computing experience.</p><h3 id="understanding-audit-mode">Understanding Audit Mode:</h3>
-<p>Before delving into the process, let’s grasp the concept of Audit Mode. It’s essentially a state in which you can customize a Windows installation before any user accounts are created, making it ideal for IT professionals, educators, and tech enthusiasts who want to tailor a system to specific needs.</p><h3 id="step-1-initial-windows-installation">Step 1: Initial Windows Installation:</h3>
-<p>Start by installing Windows as you normally would. When you reach the out-of-box experience (OOBE), press <strong>Ctrl + Shift + F3</strong> simultaneously. This magical key combination will usher you into Audit Mode without creating a user account.</p><h3 id="step-2-tweaking-and-customization">Step 2: Tweaking and Customization:</h3>
-<p>Once in Audit Mode, you’ll find yourself on the desktop with the System Preparation Tool (Sysprep) dialog open. Fear not; this is your gateway to customization. Before making any changes, consider creating a system backup to avoid potential mishaps.</p><p>Now, feel free to install software, drivers, and make any necessary adjustments to the system. This is where your expertise as a technology specialist comes into play. Customize to your heart’s content!</p><h3 id="step-3-sysprep-and-generalization">Step 3: Sysprep and Generalization:</h3>
-<p>After tweaking, it’s time to prepare the system for deployment. Launch Sysprep using the command <strong>C:\Windows\System32\Sysprep\Sysprep.exe</strong>. Choose the ‘Enter System Out-of-Box Experience (OOBE)’ option and ensure that the ‘Generalize’ box is checked. Click ‘OK,’ and Sysprep will work its magic.</p><h3 id="step-4-rebooting-into-audit-mode">Step 4: Rebooting into Audit Mode:</h3>
-<p>Once Sysprep completes its task, the system will shut down. Now, when you boot the machine again, Windows will enter Audit Mode. This time, however, it will be a generalized system ready for deployment.</p><p>Here’s where the process transforms from the mundane to the marvelous. It’s like orchestrating a symphony of technology, ensuring every note (or line of code) plays harmoniously in your customized Windows ensemble. Think of it as a backstage pass to the inner workings of your operating system – a privilege bestowed upon tech virtuosos.</p><h3 id="step-5-completing-oobe-and-user-account-creation">Step 5: Completing OOBE and User Account Creation:</h3>
-<p>Upon reboot, Windows will resume the out-of-box experience, but fear not – your customizations remain intact. Complete the OOBE process by creating your user account and finishing the setup. Your system is now a finely tuned masterpiece, tailored precisely to your specifications.</p><h3 id="conclusion">Conclusion:</h3>
-<p>In the ever-evolving landscape of technology, mastering tools like Audit Mode empowers educators, technology specialists, and anyone seeking a personalized computing experience. The ability to install software and drivers with precision before finalizing a Windows installation is a game-changer.</p><p>So, fellow tech maestros, embrace the symphony of customization, let the keys of Ctrl, Shift, and F3 guide you, and may your Windows installations be harmonious and tailored to perfection!</p>
-            ]]>
-        </content>
-    </entry>
     <entry>
         <title>Setting Up Ubuntu Server and Crafty Controller for Minecraft Server Management: A Comprehensive Guide</title>
         <author>
@@ -128,6 +100,40 @@ sudo apt install -y curl wget unzip
 <p>If you are dealing with language packs, you can integrate them similarly using the <code>/Add-Package</code> command in DISM. This ensures that your customized ISO supports multiple languages.</p><h4 id="testing-the-custom-iso">Testing the Custom ISO:</h4>
 <p>Before deploying your newly crafted ISO in a production environment, it’s wise to test it in a virtual machine or a controlled setting to ensure that all updates and customizations work as intended.</p><h3 id="conclusion">Conclusion:</h3>
 <p>Rebuilding a Windows ISO with updates committed from DISM through the Windows Assessment and Deployment Kit is a powerful skill for IT professionals. This process allows you to create a customized, up-to-date installation medium tailored to your specific needs. Embrace the control, flexibility, and efficiency that this approach offers, and let your deployments be a testament to your mastery of Windows customization. Cheers to building Windows your way!</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Booting Windows in Audit Mode to Install Software Before Providing the Device to the End User</title>
+        <author>
+            <name>Randall G. Black</name>
+        </author>
+        <link href="https://randallblack.com/booting-windows-in-audit-mode-to-install-software-before-providing-the-device-to-the-end-user/"/>
+        <id>https://randallblack.com/booting-windows-in-audit-mode-to-install-software-before-providing-the-device-to-the-end-user/</id>
+        <media:content url="https://randallblack.com/media/posts/6/windows.audit.mode.png" medium="image" />
+            <category term="windows"/>
+            <category term="microsoft"/>
+            <category term="audit mode"/>
+
+        <updated>2023-05-26T12:00:00-04:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://randallblack.com/media/posts/6/windows.audit.mode.png" alt="" />
+                    Introduction: In the vast realm of managing technology resources, there comes a time when one needs to install software and drivers on a Windows system seamlessly. One invaluable tool in this process is Audit Mode, a hidden gem that allows for customization before the system&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://randallblack.com/media/posts/6/windows.audit.mode.png" class="type:primaryImage" alt="" /></p>
+                <h2 id="introduction">Introduction:</h2>
+<p>In the vast realm of managing technology resources, there comes a time when one needs to install software and drivers on a Windows system seamlessly. One invaluable tool in this process is Audit Mode, a hidden gem that allows for customization before the system is finalized. In this guide, we’ll walk through the steps to boot Windows into Audit Mode and efficiently install the necessary components for a smooth computing experience.</p><h3 id="understanding-audit-mode">Understanding Audit Mode:</h3>
+<p>Before delving into the process, let’s grasp the concept of Audit Mode. It’s essentially a state in which you can customize a Windows installation before any user accounts are created, making it ideal for IT professionals, educators, and tech enthusiasts who want to tailor a system to specific needs.</p><h3 id="step-1-initial-windows-installation">Step 1: Initial Windows Installation:</h3>
+<p>Start by installing Windows as you normally would. When you reach the out-of-box experience (OOBE), press <strong>Ctrl + Shift + F3</strong> simultaneously. This magical key combination will usher you into Audit Mode without creating a user account.</p><h3 id="step-2-tweaking-and-customization">Step 2: Tweaking and Customization:</h3>
+<p>Once in Audit Mode, you’ll find yourself on the desktop with the System Preparation Tool (Sysprep) dialog open. Fear not; this is your gateway to customization. Before making any changes, consider creating a system backup to avoid potential mishaps.</p><p>Now, feel free to install software, drivers, and make any necessary adjustments to the system. This is where your expertise as a technology specialist comes into play. Customize to your heart’s content!</p><h3 id="step-3-sysprep-and-generalization">Step 3: Sysprep and Generalization:</h3>
+<p>After tweaking, it’s time to prepare the system for deployment. Launch Sysprep using the command <strong>C:\Windows\System32\Sysprep\Sysprep.exe</strong>. Choose the ‘Enter System Out-of-Box Experience (OOBE)’ option and ensure that the ‘Generalize’ box is checked. Click ‘OK,’ and Sysprep will work its magic.</p><h3 id="step-4-rebooting-into-audit-mode">Step 4: Rebooting into Audit Mode:</h3>
+<p>Once Sysprep completes its task, the system will shut down. Now, when you boot the machine again, Windows will enter Audit Mode. This time, however, it will be a generalized system ready for deployment.</p><p>Here’s where the process transforms from the mundane to the marvelous. It’s like orchestrating a symphony of technology, ensuring every note (or line of code) plays harmoniously in your customized Windows ensemble. Think of it as a backstage pass to the inner workings of your operating system – a privilege bestowed upon tech virtuosos.</p><h3 id="step-5-completing-oobe-and-user-account-creation">Step 5: Completing OOBE and User Account Creation:</h3>
+<p>Upon reboot, Windows will resume the out-of-box experience, but fear not – your customizations remain intact. Complete the OOBE process by creating your user account and finishing the setup. Your system is now a finely tuned masterpiece, tailored precisely to your specifications.</p><h3 id="conclusion">Conclusion:</h3>
+<p>In the ever-evolving landscape of technology, mastering tools like Audit Mode empowers educators, technology specialists, and anyone seeking a personalized computing experience. The ability to install software and drivers with precision before finalizing a Windows installation is a game-changer.</p><p>So, fellow tech maestros, embrace the symphony of customization, let the keys of Ctrl, Shift, and F3 guide you, and may your Windows installations be harmonious and tailored to perfection!</p>
             ]]>
         </content>
     </entry>
