@@ -3,7 +3,7 @@
     <title>Randall &quot;Randy&quot; Black</title>
     <link href="https://randallblack.com/feed.xml" rel="self" />
     <link href="https://randallblack.com" />
-    <updated>2025-01-16T12:41:05-05:00</updated>
+    <updated>2025-01-16T13:45:44-05:00</updated>
     <author>
         <name>Randall G. Black</name>
     </author>
@@ -14,8 +14,8 @@
         <author>
             <name>Randall G. Black</name>
         </author>
-        <link href="https://randallblack.com/crafty/"/>
-        <id>https://randallblack.com/crafty/</id>
+        <link href="https://randallblack.com/blog/crafty/"/>
+        <id>https://randallblack.com/blog/crafty/</id>
         <media:content url="https://randallblack.com/media/posts/4/crafty.png" medium="image" />
             <category term="ubuntu"/>
             <category term="minecraft server"/>
@@ -56,8 +56,8 @@ sudo apt install -y curl wget unzip
         <author>
             <name>Randall G. Black</name>
         </author>
-        <link href="https://randallblack.com/dism/"/>
-        <id>https://randallblack.com/dism/</id>
+        <link href="https://randallblack.com/blog/dism/"/>
+        <id>https://randallblack.com/blog/dism/</id>
         <media:content url="https://randallblack.com/media/posts/5/dism.png" medium="image" />
             <category term="windows adk"/>
             <category term="windows"/>
@@ -108,8 +108,8 @@ sudo apt install -y curl wget unzip
         <author>
             <name>Randall G. Black</name>
         </author>
-        <link href="https://randallblack.com/audit-mode/"/>
-        <id>https://randallblack.com/audit-mode/</id>
+        <link href="https://randallblack.com/blog/audit-mode/"/>
+        <id>https://randallblack.com/blog/audit-mode/</id>
         <media:content url="https://randallblack.com/media/posts/6/audit-mode.png" medium="image" />
             <category term="windows"/>
             <category term="microsoft"/>
