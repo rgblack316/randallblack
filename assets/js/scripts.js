@@ -1,40 +1,3 @@
-// Sticky menu
-let lastScrollPosition = 0;
-const header = document.getElementById("js-header");
-const stickyMenu = document.getElementById("js-navbar-menu");
-
-window.addEventListener('scroll', () => {
-    const currentScrollPosition = window.scrollY;
-
-    // Scrolling down
-    if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 60) {
-        header.classList.remove("is-visible");
-        header.classList.add("is-hidden");
-        if (stickyMenu) {
-            stickyMenu.classList.add("is-sticky");
-        }
-    } 
-    // Scrolling up
-    else if (currentScrollPosition < lastScrollPosition) {
-        header.classList.remove("is-hidden");
-        header.classList.add("is-visible");
-        if (stickyMenu) {
-            stickyMenu.classList.add("is-sticky");
-        }
-    }
-
-    // Reached top
-    if (currentScrollPosition < 1) {
-        header.classList.remove("is-visible");
-        if (stickyMenu) {
-            stickyMenu.classList.remove("is-sticky");
-        }
-    }
-
-    lastScrollPosition = currentScrollPosition;
-});
-
-
 // Dropdown menu
 (function (menuConfig) {
     /**
@@ -463,6 +426,7 @@ window.addEventListener('scroll', () => {
      */
     init();
 })(window.publiiThemeMenuConfig);
+
 
 // Share buttons pop-up
 (function () {
