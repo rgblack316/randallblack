@@ -3,12 +3,108 @@
     <title>Randall &quot;Randy&quot; Black</title>
     <link href="https://randallblack.com/feed.xml" rel="self" />
     <link href="https://randallblack.com" />
-    <updated>2025-01-16T14:41:59-05:00</updated>
+    <updated>2025-01-17T19:15:21-05:00</updated>
     <author>
         <name>Randall G. Black</name>
     </author>
     <id>https://randallblack.com</id>
 
+    <entry>
+        <title>Using Apple Shortcuts to Map Network Drives Using Apple &amp; Shell Scripts</title>
+        <author>
+            <name>Randall G. Black</name>
+        </author>
+        <link href="https://randallblack.com/blog/nas-shortcuts/"/>
+        <id>https://randallblack.com/blog/nas-shortcuts/</id>
+        <media:content url="https://randallblack.com/media/posts/7/apple.scripts.shortcuts.png" medium="image" />
+            <category term="shortcuts"/>
+            <category term="shell script"/>
+            <category term="macOS"/>
+            <category term="apple script"/>
+            <category term="apple"/>
+
+        <updated>2025-01-17T19:08:12-05:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://randallblack.com/media/posts/7/apple.scripts.shortcuts.png" alt="" />
+                    Mapping network storage drives is essential for accessing shared files on your network quickly. If you’re using a network storage device with SMB shares, automating the process with AppleScript and Apple Shortcuts can save time. In this guide, we’ll walk you through using AppleScript to&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://randallblack.com/media/posts/7/apple.scripts.shortcuts.png" class="type:primaryImage" alt="" /></p>
+                <p>Mapping network storage drives is essential for accessing shared files on your network quickly. If you’re using a network storage device with SMB shares, automating the process with <strong>AppleScript</strong> and <strong>Apple Shortcuts</strong> can save time. In this guide, we’ll walk you through using AppleScript to map network drives and set up an Apple Shortcut to run the script effortlessly.</p><p>We’ll be using the following IP address and share names:</p><ul>
+<li><strong>IP Address</strong>: <code>192.168.1.100</code></li>
+<li><strong>SMB Shares</strong>: <code>Podcast</code>, <code>Personal</code>, and <code>Music</code></li>
+</ul>
+<hr>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>A macOS device running <strong>macOS Monterey or later</strong> (for Apple Shortcuts).  </li>
+<li>Access to the SMB shares on your network storage device (correct credentials and permissions).  </li>
+<li>Basic familiarity with <strong>AppleScript</strong> and <strong>Apple Shortcuts</strong>.</li>
+</ul>
+<hr>
+<h2 id="step-1-write-the-applescript-to-mount-smb-drives">Step 1: Write the AppleScript to Mount SMB Drives</h2>
+<p>AppleScript is a powerful scripting tool built into macOS that allows for automation. Let’s create a script that mounts the <code>Podcast</code>, <code>Personal</code>, and <code>Music</code> SMB shares hosted on the device at <code>192.168.1.100</code>.</p><p>Here’s the AppleScript to mount the shares:</p><pre><code class="language-applescript">-- Define a handler to connect to SMB shares
+on mountSMBShare(shareName)
+    try
+        set serverAddress to &quot;smb://192.168.1.100/&quot; &amp; shareName
+        mount volume serverAddress
+    on error errMsg
+        display dialog &quot;Failed to mount &quot; &amp; shareName &amp; &quot;: &quot; &amp; errMsg buttons {&quot;OK&quot;} default button &quot;OK&quot;
+    end try
+end mountSMBShare
+
+-- Mount the Podcast, Personal, and Music shares
+mountSMBShare(&quot;Podcast&quot;)
+mountSMBShare(&quot;Personal&quot;)
+mountSMBShare(&quot;Music&quot;)
+</code></pre>
+<h3 id="how-to-use-this-script">How to Use This Script</h3>
+<ol>
+<li>Open the <strong>Script Editor</strong> on your Mac (<code>Applications</code> &gt; <code>Utilities</code> &gt; <code>Script Editor</code>).</li>
+<li>Paste the AppleScript code above.</li>
+<li>Click <strong>File</strong> &gt; <strong>Save</strong>, and save the script as <code>MountSMBDrives.scpt</code>. Make sure to select <code>Script</code> as the <strong>file format</strong>.</li>
+<li><strong>Test</strong> the script by clicking the <strong>Run</strong> button inside Script Editor. If successful, the shares will appear in <strong>Finder</strong> under “Network.”</li>
+</ol>
+<hr>
+<h2 id="step-2-set-up-the-script-in-apple-shortcuts">Step 2: Set Up the Script in Apple Shortcuts</h2>
+<p>Apple Shortcuts allows you to trigger actions with a single click. Let’s integrate our AppleScript into a Shortcut for easy access.</p><h3 id="how-to-create-the-shortcut">How to Create the Shortcut</h3>
+<ol>
+<li>Open the <strong>Shortcuts</strong> app on your Mac.</li>
+<li>Click the <strong>+</strong> button to create a new shortcut.</li>
+<li>Click <strong>Add Action</strong> and search for <strong>Run AppleScript</strong>.</li>
+<li><strong>Paste the AppleScript</strong> from Step 1 into the action.</li>
+<li>Test the shortcut by clicking <strong>Run</strong> in the Shortcuts app. If everything is configured correctly, the SMB shares should be mounted.</li>
+<li>Save the shortcut with a name like <code>Mount SMB Drives</code>.</li>
+</ol>
+<hr>
+<h2 id="step-3-add-the-shortcut-to-the-menu-bar-or-desktop">Step 3: Add the Shortcut to the Menu Bar or Desktop</h2>
+<p>To make the shortcut even more accessible, you can add it to the <strong>menu bar</strong> or create a <strong>desktop shortcut</strong>.</p><h3 id="to-add-to-the-menu-bar">To Add to the Menu Bar</h3>
+<ol>
+<li>Open the <strong>Shortcuts</strong> app.</li>
+<li>Click the three dots on the <code>Mount SMB Drives</code> shortcut.</li>
+<li>Toggle <strong>Pin in Menu Bar</strong>.</li>
+</ol>
+<h3 id="to-add-to-the-desktop">To Add to the Desktop</h3>
+<ol>
+<li>In the Shortcuts app, right-click the <code>Mount SMB Drives</code> shortcut.</li>
+<li>Click <strong>Create Alias</strong> and drag the alias to your desktop.</li>
+</ol>
+<hr>
+<h2 id="step-4-optional-automate-the-shortcut-on-login">Step 4: (Optional) Automate the Shortcut on Login</h2>
+<p>You can configure the shortcut to run every time your Mac logs in, ensuring your SMB shares are always mounted.</p><ol>
+<li>Open <strong>System Settings</strong> &gt; <strong>Users &amp; Groups</strong>.</li>
+<li>Select your user account and click <strong>Login Items</strong>.</li>
+<li>Click the <strong>+</strong> button and select your <strong>shortcut alias</strong> from the desktop.</li>
+</ol>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>Using AppleScript with Apple Shortcuts is a powerful way to map SMB network drives quickly. This setup allows you to avoid manually connecting to the drives every time you boot your Mac or need access to shared storage. With just one click, or even automated at login, you’ll have instant access to your <code>Podcast</code>, <code>Personal</code>, and <code>Music</code> shares.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Setting Up Ubuntu Server and Crafty Controller for Minecraft Server Management: A Comprehensive Guide</title>
         <author>
