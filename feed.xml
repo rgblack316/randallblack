@@ -3,7 +3,7 @@
     <title>Randall &quot;Randy&quot; Black</title>
     <link href="https://randallblack.com/feed.xml" rel="self" />
     <link href="https://randallblack.com" />
-    <updated>2025-01-17T19:15:21-05:00</updated>
+    <updated>2025-02-01T11:08:05-05:00</updated>
     <author>
         <name>Randall G. Black</name>
     </author>
@@ -27,7 +27,7 @@
             <summary>
                 <![CDATA[
                         <img src="https://randallblack.com/media/posts/7/apple.scripts.shortcuts.png" alt="" />
-                    Mapping network storage drives is essential for accessing shared files on your network quickly. If you’re using a network storage device with SMB shares, automating&hellip;
+                    Mapping network storage drives is essential for accessing shared files on your network quickly. If you’re using a network storage device with SMB shares, automating the process with AppleScript and Apple Shortcuts can save time. In this guide, we’ll walk you through using AppleScript to map network drives and set&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -123,7 +123,7 @@ mountSMBShare(&quot;Music&quot;)
             <summary>
                 <![CDATA[
                         <img src="https://randallblack.com/media/posts/4/crafty.png" alt="" />
-                    Are you looking to create and manage Minecraft servers with ease? Setting up Ubuntu Server along with Crafty Controller can streamline the process, offering efficient&hellip;
+                    Are you looking to create and manage Minecraft servers with ease? Setting up Ubuntu Server along with Crafty Controller can streamline the process, offering efficient server management capabilities. In this guide, we’ll walk you through the step-by-step process to install and configure Ubuntu Server, Crafty Controller, and Minecraft servers. Additionally,&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -167,7 +167,7 @@ sudo apt install -y curl wget unzip
             <summary>
                 <![CDATA[
                         <img src="https://randallblack.com/media/posts/5/dism.png" alt="" />
-                    Rebuilding a Windows ISO with updates committed from DISM using the Windows Assessment and Deployment Kit (ADK) is a meticulous process but incredibly rewarding for&hellip;
+                    Rebuilding a Windows ISO with updates committed from DISM using the Windows Assessment and Deployment Kit (ADK) is a meticulous process but incredibly rewarding for IT professionals seeking a streamlined deployment solution. Let’s break down the steps to accomplish this task effectively. Ensure that you have the Windows Assessment and&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -215,7 +215,7 @@ sudo apt install -y curl wget unzip
             <summary>
                 <![CDATA[
                         <img src="https://randallblack.com/media/posts/6/audit-mode.png" alt="" />
-                    Introduction: In the vast realm of managing technology resources, there comes a time when one needs to install software and drivers on a Windows system&hellip;
+                    Introduction: In the vast realm of managing technology resources, there comes a time when one needs to install software and drivers on a Windows system seamlessly. One invaluable tool in this process is Audit Mode, a hidden gem that allows for customization before the system is finalized. In this guide,&hellip;
                 ]]>
             </summary>
         <content type="html">
